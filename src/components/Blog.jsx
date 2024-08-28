@@ -41,12 +41,12 @@ const Blog = ({ blog, username, updateBlog, deleteBlog }) => {
       <div>{blog.url}</div>
       <div>likes {blog.likes} <button onClick={incrementLikes}>like</button></div>
       <div>{blog.user.name}</div>
-      {blog.user.username === username ? <button onClick={removeBlog}>remove</button> : <div></div>}
+      {blog.user.username === username ? <div><button onClick={removeBlog}>remove</button></div> : <div></div>}
     </div>
   )
 
   return (
-    <div style={blogStyle}>
+    <div className="blog" style={blogStyle}>
       <div>
         {blog.title} {blog.author}
       </div>
